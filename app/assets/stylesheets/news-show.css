@@ -1,0 +1,58 @@
+.news-contents {
+  width: 714px;
+  height: auto;
+  margin: 73px auto;
+  text-align: center;
+}
+
+.news-contents h2 {
+  font-size: 37px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.n-title .news-date {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.news-contents-pic img {
+  height: 476px;
+  width: auto;
+  margin-top: 20px;
+}
+
+.news-text {
+  height: auto;
+  width: 905px;
+  margin: 57px auto 132px;
+}
+
+.news-text p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #231815;
+}
+
+.n-buttons {
+  width: 714px;
+  height: 50px;
+  margin: 0 auto 105px;
+}
+
+.n-buttons-contents {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.n-buttons ul {
+  margin: 0 auto;
+}
+
+.n-buttons ul li{
+  float: left;
+}
+
+.n-buttons ul .last-button {
+  margin-right: 0;
+}
