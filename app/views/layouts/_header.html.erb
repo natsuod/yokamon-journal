@@ -9,34 +9,34 @@
     <div class="header--glovalnav">
       <ul>
         <li>
-          <a href="#">
+          <%= link_to abouts_path, method: :get do %>
             <span class="eng">ABOUT</span>
             <span class="ja">道後オンセナートとは</span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to news_index_path, method: :get do %>
             <span class="eng">NEWS</span>
             <span class="ja">最新情報</span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to events_path, method: :get do %>
             <span class="eng">EVENT</span>
             <span class="ja">イベント情報</span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to new_news_path, method: :get do %>
             <span class="eng">POST NEWS</span>
             <span class="ja">ニュース投稿</span>
-          </a>
+          <% end %>
         </li>
         <li>
-          <a href="#">
+          <%= link_to new_event_path, method: :get do %>
             <span class="eng">POST EVENTS</span>
             <span class="ja">イベント投稿</span>
-          </a>
+          <% end %>
         </li>
         <li class="last">
           <a href="#">
