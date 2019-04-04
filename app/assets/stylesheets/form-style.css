@@ -1,0 +1,95 @@
+.form-container {
+  width: 1017px;
+  min-height: 1211px;
+  margin: 72px auto 82px;
+}
+
+.form-container h3 {
+  font-size: 37px;
+  font-weight: 700;
+  color: #231815;
+}
+
+.form-container .form-content {
+  width: 900px;
+  margin: 37px auto 0;
+}
+
+.form-container .form-content p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #231815;
+  padding-bottom: 43px;
+}
+
+#red-border {
+  border-bottom: solid 2px #cf3534;
+}
+
+.form-container span {
+  color: #cf3534;
+}
+
+.form {
+  margin-top: 37px;
+}
+
+.form table tbody tr {
+  display: block;
+  text-align: left;
+  margin-bottom: 22px;
+}
+
+.form th {
+  width: 120px;
+  font-size: 14px;
+  color: #231815;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+  padding-right: 40px;
+}
+
+.form input {
+  height: 30px;
+  width: 725px;
+}
+
+.form textarea {
+  height: 245px;
+  width: 725px;
+}
+
+form .submit .submit-btn {
+  display: inline-block;
+  width: 900px;
+  height: 45px;
+  line-height: 46px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: solid 2px #231815;
+  transition: all 0.3s ease-out;
+}
+
+form .submit .submit-btn:hover {
+  background-color: #cf3534;
+  border: solid 2px #cf3534;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+form {
+  padding-bottom: 26px;
+  border-bottom: solid 2px #cf3534;
+}
+
+.form-container .notes {
+  margin-top: 38px;
+}
+
+.form-container .notes h4 {
+  margin-bottom: 27px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #231815
+}
