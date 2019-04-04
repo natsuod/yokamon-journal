@@ -1,0 +1,62 @@
+.about-container .main {
+  height: 500px;
+  width: 100%;
+  background-image: url(./images/main.png);
+  background-size: cover;
+}
+
+
+.about-container section h2 {
+ font-size: 37px;
+ color: #231815;
+ font-weight: 700;
+}
+
+.about-container .about-contents {
+  width: 900px;
+  margin: 34px auto 57px;
+  border-top: solid 1px #231815;
+}
+
+.about-container .about-contents h3 {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 47px;
+  color: #231815;
+  text-align: center;
+  padding: 62px 0 67px;
+}
+
+.about-container p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #231815;
+}
+
+.about-container .feature {
+  background-color: #cf3434;
+  width: 100%;
+}
+
+.about-container .feature h2 {
+  width: 1070px;
+  margin: 0 auto 35px;
+  padding-top: 70px;
+  color: #fff;
+}
+
+.about-container .feature p {
+  width: 900px;
+  margin: 0 auto;
+  color: #fff;
+  padding-bottom: 76px;
+}
+
+.about-container .outline p {
+  width: 900px;
+  margin: 0 auto;
+}
+
+#about-b {
+  margin-bottom: 77px;
+}
