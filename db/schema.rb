@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190410052224) do
+ActiveRecord::Schema.define(version: 20190410053306) do
+
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "e_title", null: false
+    t.string "time", null: false
+    t.string "date", null: false
+    t.text "e_body", null: false
+    t.string "e_image"
+    t.string "host", null: false
+    t.string "place", null: false
+    t.string "price", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
 
   create_table "news", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title", null: false
@@ -34,5 +49,6 @@ ActiveRecord::Schema.define(version: 20190410052224) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "events", "users"
   add_foreign_key "news", "users"
 end
