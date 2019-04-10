@@ -1,0 +1,45 @@
+.user-container {
+  width: 1017px;
+  min-height: 100vh;
+  margin: 72px auto 0;
+}
+
+.user-container h3 {
+  font-size: 37px;
+  font-weight: 700;
+  color: #231815;
+}
+
+.user-form {
+  width: 650px;
+  margin: 37px auto;
+}
+
+.field {
+  margin-bottom: 20px;
+  width: 600px;
+}
+
+.field-input input{
+  width: 100%;
+  padding: 5px;
+}
+
+.actions .submit-btn{
+  display: inline-block;
+  width: 610px;
+  height: 45px;
+  line-height: 46px;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  border: solid 2px #231815;
+  transition: all 0.3s ease-out;
+}
+
+.actions .submit-btn:hover {
+  background-color: #cf3534;
+  border: solid 2px #cf3534;
+  color: #fff;
+  transform: scale(1.05);
+}
