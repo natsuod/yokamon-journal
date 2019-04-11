@@ -5,40 +5,40 @@
     <p id="red-border">ニュースの投稿は下記フォームよりお願いいたします。<br>（<span>※</span>は必須入力項目となります。）</p>
 
     <div class="form">
-      <form>
+      <%= form_for :post, url: new_news_path do |f| %>
         <table>
           <tbody>
             <tr>
               <th>
-                ニュースタイトル<span>*</span>
+                <%= f.label :ニュースタイトル %><span>*</span>
               </th>
               <td>
-                <input type="text" name="name" placeholder="ワークショップ開催のお知らせ">
+                <%= f.text_field :title, placeholder: 'ワークショップ開催のお知らせ' %>
               </td>
             </tr>
             <tr>
               <th>
-                ニュース内容<span>*</span>
+                <%= f.label :ニュース内容 %><span>*</span>
               </th>
               <td>
-                <textarea name="message" placeholder="お知らせの内容を記入してください。"></textarea>
+                <%= f.text_area :body, placeholder: 'お知らせの内容を記入してください。' %>
               </td>
             </tr>
             <tr>
               <th>
-                画像ファイル添付
+                <%= f.label :画像ファイル添付 %>
               </th>
               <td>
-                <input type="file" name="news-pic">
+                <%= f.file_field :image %>
               </td>
             </tr>
           </tbody>
         </table>
         <p>入力内容を再度ご確認の上、間違えがなければ下の送信ボタンをクリック・タップしてください。</p>
         <p class="submit">
-          <input type="submit" value="ニュースを投稿する" class="submit-btn">
+          <%= f.submit 'ニュースを投稿する', class: 'submit-btn' %>
         </p>
-      </form>
+      <% end %>
     </div>
 
     <div class="notes">
