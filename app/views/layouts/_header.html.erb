@@ -5,6 +5,23 @@
         <%=image_tag('onsenart_logo.svg')%>
       </a>
     </div>
+    <ul class="header--topnav">
+      <% if user_signed_in? %>
+        <li class="header--topnav__lung user">
+          <span><%= current_user.nickname %></span>
+        </li>
+        <li class="header--topnav__lung signIn">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <li class="header--topnav__lung en">
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+        </li>
+        <li class="header--topnav__lung signIn">
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+        </li>
+      <% end %>
+    </ul>
 
     <div class="header--glovalnav">
       <ul>
