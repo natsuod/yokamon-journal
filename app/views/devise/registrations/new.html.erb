@@ -7,6 +7,15 @@
 
       <div class="field">
         <div class="field-label">
+          <%= f.label :nickname %>
+        </div>
+        <div class="field-input">
+          <%= f.text_field :nickname, autofocus: true, maxlength: "10"  %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="field-label">
           <%= f.label :email %><br />
         </div>
         <div class="field-input">
