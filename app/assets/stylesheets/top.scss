@@ -146,9 +146,13 @@ a {
 }
 
 .main {
-  height: auto;
-  min-width: 100%;
+  width: 100%;
   margin: 40px 0 65px;
+}
+
+.autoplay .main--img {
+  width: auto;
+  height: 500px;
 }
 
 .container {
