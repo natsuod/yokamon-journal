@@ -10,18 +10,58 @@
           <tbody>
             <tr>
               <th>
-                <%= f.label :ニュースタイトル %><span>*</span>
+                <%= f.label :イベントタイトル %><span>*</span>
               </th>
               <td>
-                <%= f.text_field :e_title, placeholder: 'ワークショップ開催のお知らせ' %>
+                <%= f.text_field :e_title, placeholder: 'イベント名を記入してください。' %>
               </td>
             </tr>
             <tr>
               <th>
-                <%= f.label :ニュース内容 %><span>*</span>
+                <%= f.label :時間 %><span>*</span>
               </th>
               <td>
-                <%= f.text_area :e_body, placeholder: 'お知らせの内容を記入してください。' %>
+                <%= f.text_field :time, placeholder: '5/4 10:30-12:30' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :開催日 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_field :date, placeholder: '05月04日' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :主催者 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_field :host, placeholder: '主催者を記入してください。' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :場所 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_field :place, placeholder: 'イベント開催場所を記入してください。' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :参加費 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_field :price, placeholder: '無料' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :イベントの内容 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_area :e_body, placeholder: 'イベントの内容を記入してください。' %>
               </td>
             </tr>
             <tr>
@@ -36,7 +76,7 @@
         </table>
         <p>入力内容を再度ご確認の上、間違えがなければ下の送信ボタンをクリック・タップしてください。</p>
         <p class="submit">
-          <%= f.submit 'ニュースを投稿する', class: 'submit-btn' %>
+          <%= f.submit 'イベントを投稿する', class: 'submit-btn' %>
         </p>
       <% end %>
     </div>
