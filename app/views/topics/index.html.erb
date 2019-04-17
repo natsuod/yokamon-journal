@@ -12,7 +12,7 @@
             <div class="before">read more</div>
             <div class="news-date"><%= topic.created_at.strftime("%Y.%m.%d") %></div>
             <div class="news-image">
-              <%= image_tag 'art1.png' %>
+              <%= image_tag topic.image if topic.image.present? %>
               <div class="red-box">
                 <p><%= topic.title %><i class="fa fa-caret-right"></i></p>
               </div>
