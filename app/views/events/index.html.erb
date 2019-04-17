@@ -11,7 +11,7 @@
             <div class="before">read more</div>
             <div class="event-date"><%= event.created_at.strftime("%Y.%m.%d") %></div>
             <div class="event-img">
-              <%= image_tag 'art1.png' %>
+              <%= image_tag event.e_image.url %>
             </div>
             <div class="event-details">
               <div class="event-name">
