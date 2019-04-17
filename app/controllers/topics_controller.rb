@@ -7,4 +7,9 @@ class TopicsController < ApplicationController
   def show
 
   end
+
+  def new
+    @topic = Topic.new
+  end
+
 end
