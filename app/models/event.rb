@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :e_image, ImageUploader
 end
