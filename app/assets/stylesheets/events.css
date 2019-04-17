@@ -22,7 +22,7 @@
   margin-right: 46px;
 }
 
-.event-index-box .last-event-info {
+.event-index-box .event-info:nth-child(even) {
   margin-right: 0px;
 }
 

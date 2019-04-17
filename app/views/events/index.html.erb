@@ -5,89 +5,28 @@
   <div class="event-index">
     <div class="event-index-box">
       <ul>
-        <li>
-          <a class="event-info" href="#">
+        <% @events.each do |event| %>
+        <li class="event-info">
+          <%= link_to event_path(event.id), class: 'event-info' do %>
             <div class="before">read more</div>
-            <div class="event-date">
-              <i class="fas fa-caret-right fa-lg"></i>
-              <p class="event-data">終了済み</p>
-            </div>
+            <div class="event-date"><%= event.created_at.strftime("%Y.%m.%d") %></div>
             <div class="event-img">
               <%= image_tag 'art1.png' %>
             </div>
             <div class="event-details">
               <div class="event-name">
-                <p>イベント名：谷このみ　谷このみの湯「秋のしっとりプルプル素肌祭り！」</p>
+                <p>イベント名：<%= event.e_title %></p>
               </div>
               <div class="event-host">
-                <p>主催：道後アートプロジェクト・アートNPOカコア</p>
+                <p>主催：<%= event.host %></p>
               </div>
               <div class="event-price">
-                <p>参加費：無料</p>
+                <p>参加費：<%= event.price %></p>
               </div>
             </div>
-           </a>
-        </li>
-        <li class="last-event-info">
-          <a class="event-info" href="#">
-            <div class="before">read more</div>
-            <div class="event-date">2019.01.30</div>
-            <div class="event-img">
-              <%= image_tag 'art1.png' %>
-            </div>
-            <div class="event-details">
-              <div class="event-name">
-                <p>イベント名：地元プロジェクト/「街の中の雲」</p>
-              </div>
-              <div class="event-host">
-                <p>主催：道後アートプロジェクト・アートNPOカコア</p>
-              </div>
-              <div class="event-price">
-                <p>参加費：無料</p>
-              </div>
-            </div>
-           </a>
-        </li>
-        <li>
-          <a class="event-info" href="#">
-            <div class="before">read more</div>
-            <div class="event-date">2019.01.30</div>
-            <div class="event-img">
-              <%= image_tag 'art1.png' %>
-            </div>
-            <div class="event-details">
-              <div class="event-name">
-                <p>イベント名：地元プロジェクト/「街の中の雲」</p>
-              </div>
-              <div class="event-host">
-                <p>主催：道後アートプロジェクト・アートNPOカコア</p>
-              </div>
-              <div class="event-price">
-                <p>参加費：無料</p>
-              </div>
-            </div>
-           </a>
-        </li>
-        <li class="last-event-info">
-          <a class="event-info" href="#">
-            <div class="before">read more</div>
-            <div class="event-date">2019.01.30</div>
-            <div class="event-img">
-              <%= image_tag 'art1.png' %>
-            </div>
-            <div class="event-details">
-              <div class="event-name">
-                <p>イベント名：地元プロジェクト/「街の中の雲」</p>
-              </div>
-              <div class="event-host">
-                <p>主催：道後アートプロジェクト・アートNPOカコア</p>
-              </div>
-              <div class="event-price">
-                <p>参加費：参加費無料・要事前申し込み[人数] 各日約10名 *二日間各日 3 時間づつ、合計 6 時間で完成させます。連続での参加をお勧めしますが、一日のみでも参加可能です。中高生をメインに、子供から大人までどなたでもご参加いただけます。</p>
-              </div>
-            </div>
-           </a>
-        </li>
+           <% end %>
+         </li>
+       <% end %>
       </ul>
     </div>
   </div>
