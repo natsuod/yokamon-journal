@@ -6,56 +6,21 @@
   <section class="news-sec">
     <h2 class="news-month">2019 02 February</h2>
     <ul>
-      <li>
-        <a class="news-box" href="#">
-          <div class="before">read more</div>
-          <div class="news-date">2019.01.30</div>
-          <div class="news-image">
-            <%= image_tag 'art1.png' %>
-            <div class="red-box">
-              <p>作品移設のお知らせ<i class="fa fa-caret-right"></i></p>
+      <% @topics.each do |topic| %>
+        <li>
+          <%= link_to topic_path(topic.id), class: 'news-box' do %>
+            <div class="before">read more</div>
+            <div class="news-date"><%= topic.created_at.strftime("%Y.%m.%d") %></div>
+            <div class="news-image">
+              <%= image_tag 'art1.png' %>
+              <div class="red-box">
+                <p><%= topic.title %><i class="fa fa-caret-right"></i></p>
+              </div>
             </div>
-          </div>
-         </a>
-      </li>
-      <li>
-        <a class="news-box" href="#">
-          <div class="before">read more</div>
-          <div class="news-date">2019.01.30</div>
-          <div class="news-image">
-            <%= image_tag 'art1.png' %>
-            <div class="red-box">
-              <p>作品移設のお知らせ<i class="fa fa-caret-right"></i></p>
-            </div>
-          </div>
-         </a>
-      </li>
-      <li class="last-news-box">
-        <a class="news-box" href="#">
-          <div class="before">read more</div>
-          <div class="news-date">2019.01.30</div>
-          <div class="news-image">
-            <%= image_tag 'art1.png' %>
-            <div class="red-box">
-              <p>作品移設のお知らせ<i class="fa fa-caret-right"></i></p>
-            </div>
-          </div>
-         </a>
-      </li>
-      <li>
-        <a class="news-box" href="#">
-          <div class="before">read more</div>
-          <div class="news-date">2019.01.30</div>
-          <div class="news-image">
-            <%= image_tag 'art1.png' %>
-            <div class="red-box">
-              <p>作品移設のお知らせ<i class="fa fa-caret-right"></i></p>
-            </div>
-          </div>
-         </a>
-      </li>
+           <% end %>
+        </li>
+      <% end %>
     </ul>
-  </section>
 
   <section class="news-sec">
     <h2 class="news-month">2019 01 January</h2>
