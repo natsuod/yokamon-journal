@@ -51,8 +51,24 @@
   text-align: center;
 }
 
+.event-poster .no-image-event {
+  width: 715px;
+  height: 500px;
+  background-color: #d7d7d7;
+  margin: 0 auto;
+}
+
+.event-poster .no-image-event p {
+  font-size: 40px;
+  color: #fff;
+  line-height: 500px;
+  text-align: center;
+  font-family: Alte-DIN-1451-Mittelschrift;
+}
+
 .event-container .event-poster img {
-  height: 1010px;
+  width: 715px;
+  height: auto;
 }
 
 .event-container .event-text {
