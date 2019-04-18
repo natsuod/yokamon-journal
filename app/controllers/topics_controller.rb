@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
 
   def index
-    @topics = Topic.all
+    @topics = Topic.order("created_at DESC")
   end
 
   def show
