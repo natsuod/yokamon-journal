@@ -1,14 +1,16 @@
 <div class="news-contents">
   <div class="n-title">
-    <h2>作品メンテナンスのお知らせ</h2>
-    <div class="news-date">2019.01.18</div>
+    <h2><%= @topic.title %></h2>
+    <div class="news-date"><%= @topic.created_at.strftime("%Y.%m.%d") %></div>
   </div>
   <div class="news-contents-pic">
-    <img src="images/art1.png" alt="ひかりの実">
+    <% unless @topic.image.blank? %>
+      <%= image_tag @topic.image.url %>
+    <% end %>
   </div>
 </div>
 <div class="news-text">
-  <p>冠山に設置されています、スティーヴン・ムシンの作品<br>「Floating on Steam（大影絵／道後夜話）」ですが、<br>機材メンテナンスのため、現在公開が中止されております。<br><br>また、メンテナンスが終了次第お知らせいたしますのでご了承くださいませ。</p>
+  <p><%= @topic.body %></p>
 </div>
 <div class="n-buttons">
   <div class="n-buttons-contents">
@@ -25,7 +27,7 @@
         <div class="btn">
           <div class="btn-content">
             <div class="btn-hover"></div>
-            <a class="btn--readmore" href="#">news top</a>
+            <%= link_to "news top", topics_path, class: 'btn--readmore' %>
           </div>
         </div>
       </li>
