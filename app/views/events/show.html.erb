@@ -2,39 +2,44 @@
   <div class="event-details">
     <dl class="event-name">
       <dt>イベント名：</dt>
-      <dd>ドウゴ”街”ダンス＠道後商店街</dd>
+      <dd><%= @event.e_title %></dd>
     </dl>
     <dl class="event-date">
       <dt>開催日：</dt>
-      <dd>02月23日</dd>
+      <dd><%= @event.date %></dd>
     </dl>
     <dl class="event-time">
       <dt>時間：</dt>
-      <dd>2/23土 9:00-21:00、2/24日 10:00-17:00※両日、雨天中止</dd>
+      <dd><%= @event.time %></dd>
     </dl>
   </div>
 
   <div class="event-poster">
-    <img src="images/event-poster.jpg">
+    <% unless @event.e_image.blank? %>
+      <%= image_tag @event.e_image.url %>
+    <% else %>
+      <div class="no-image-event">
+        <p>No Image</p>
+      </div>
+    <% end %>
   </div>
 
   <div class="event-text">
-    <p>道後におけるまちづくりと芸術文化、観光振興の推進を図る「道後雲使い集団」と建築家・バンバタカユキによる「街の中の雲」。8月に引き続き、飛鳥乃湯泉中庭に大きな風船状の「雲」を浮かばせます。今回は雲の下にこたつが登場！雲のある庭をお楽しみください！　協力：道後温泉誇れるまちづくり推進協議会・伊予匠ノ会・帝人フロンティア株式会社・帝人株式会社／後援：松山市・松山市教育委員会／問い合わせ先：udcm.matsuyama@gmail.com （松山アーバンデザインセンター内道後雲使い集団）
-    </p>
+    <p><%= @event.e_body %></p>
   </div>
 
   <div class="event-details" id="bottom-detail">
     <dl class="event-host">
       <dd>主催：</dd>
-      <dd>道後アートプロジェクト・アートNPOカコア</dd>
+      <dd><%= @event.host %></dd>
     </dl>
     <dl class="event-place">
       <dd>場所：</dd>
-      <dd>飛鳥乃湯泉中庭</dd>
+      <dd><%= @event.place %></dd>
     </dl>
     <dl class="event-price">
       <dd>参加費：</dd>
-      <dd>無料</dd>
+      <dd><%= @event.price %></dd>
     </dl>
   </div>
 
@@ -52,7 +57,7 @@
         <div class="btn">
           <div class="btn-content">
             <div class="btn-hover"></div>
-            <a class="btn--readmore" href="#">event top</a>
+            <%= link_to "event top", events_path, class: 'btn--readmore' %>
           </div>
         </div>
       </li>
