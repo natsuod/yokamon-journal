@@ -51,6 +51,21 @@
   transition: all 0.5s ease;
 }
 
+.event-img .no-image {
+  width: 427px;
+  height: 300px;
+  background-color: #979696;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.event-img .no-image p {
+  font-size: 40px;
+  line-height: 300px;
+  text-align: center;
+  font-family: Alte-DIN-1451-Mittelschrift;
+}
+
 .event-index-box ul li:hover .event-img img {
   opacity: 0.4;
 }

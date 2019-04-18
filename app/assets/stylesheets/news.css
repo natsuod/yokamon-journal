@@ -56,17 +56,18 @@
 .news-box .news-image .no-image {
   width: 280px;
   height: 280px;
-  background-color: #f1f0f0;
+  background-color: #979696;
   color: #ffffff;
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-.no-image p {
-  font-size: 45px;
-  margin-top: 50px;
+.news-image .no-image p {
+  font-size: 30px;
+  line-height: 280px;
   text-align: center;
+  font-family: Alte-DIN-1451-Mittelschrift;
 }
 
 .news-box .news-date {
