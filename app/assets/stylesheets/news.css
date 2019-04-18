@@ -53,6 +53,22 @@
   transition: all 0.5s ease;
 }
 
+.news-box .news-image .no-image {
+  width: 280px;
+  height: 280px;
+  background-color: #f1f0f0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.no-image p {
+  font-size: 45px;
+  margin-top: 50px;
+  text-align: center;
+}
+
 .news-box .news-date {
   font-size: 24px;
   color: #231815;
@@ -61,6 +77,8 @@
 }
 
 .news-image {
+  width: 280px;
+  height: 280px;
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -92,7 +110,7 @@
   border-radius: 50%;
 }
 
-.news-sec ul li:hover .news-image img{
+.news-sec ul li:hover .news-image img,.no-image{
   transform: scale(1.2);
   opacity: 0.4;
 }

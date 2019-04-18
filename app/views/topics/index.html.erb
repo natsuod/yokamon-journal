@@ -12,7 +12,13 @@
             <div class="before">read more</div>
             <div class="news-date"><%= topic.created_at.strftime("%Y.%m.%d") %></div>
             <div class="news-image">
-              <%= image_tag topic.image.url %>
+              <% unless topic.image.blank? %>
+                <%= image_tag topic.image.url %>
+              <% else %>
+                <div class="no-image">
+                  <p>NO IMAGE</p>
+                </div>
+              <% end %>
               <div class="red-box">
                 <p><%= topic.title %><i class="fa fa-caret-right"></i></p>
               </div>
