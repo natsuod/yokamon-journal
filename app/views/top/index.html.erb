@@ -34,55 +34,34 @@
       EVENT
     </h2>
     <ul>
-      <li>
-        <a class="event--box" href="#">
-          <div class="before">read more</div>
-          <div class="event-image">
-            <%= image_tag 'event1.png' %>
-          </div>
-          <div class="event-date">
-            <p class="round-date">2019 <br>02.23</p>
-          </div>
-          <div class="contents">
-            <p class="contents--title">地元プロジェクト/「街の中の雲」</p>
-            <p>道後アートプロジェクト・アートNPOカコア<br>飛鳥乃湯温泉中庭</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class="event--box" href="#">
-          <div class="before">read more</div>
-          <div class="event-image">
-            <%= image_tag 'event2.png' %>
-          </div>
-          <div class="event-date">
-            <p class="round-date">2019 <br>02.23</p>
-          </div>
-          <div class="contents">
-            <p class="contents--title">道後の”街”ダンス@道後商店街</p>
-            <p>道後オンセナート実行委員会<br>道後商店街 ※道後温泉駅前放生園 坊ちゃんカラクリ時計前からスタートしますのでお集まりください</p>
-          </div>
-        </a>
-      </li>
-      <li class="last-box">
-        <a class="event--box" href="#">
-          <div class="before">read more</div>
-          <div class="event-image">
-            <%= image_tag 'event3.png' %>
-          </div>
-          <div class="event-date">
-            <p class="round-date">2019 <br>02.22</p>
-          </div>
-          <div class="contents">
-            <p class="contents--title">VJ NIGHT IN DOGO VOL.2 BY ENLIGHTEMENT</p>
-            <p>道後オンセナート実行委員会<br>道後商店街アーケード</p>
-          </div>
-        </a>
-      </li>
+      <% @events.each do |event| %>
+        <li>
+          <%= link_to event_path(event.id), class: "event--box" do %>
+            <div class="before">read more</div>
+            <div class="event-image">
+              <% unless event.e_image.blank? %>
+                <%= image_tag event.e_image.url %>
+              <% else %>
+                <div class="no-image">
+                  <p>NO IMAGE</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="event-date">
+              <p class="round-date"><%= event.created_at.strftime("%Y") %><br><%= event.created_at.strftime("%m.%d") %></p>
+            </div>
+            <div class="contents">
+              <p class="contents--title"><%= event.e_title %></p>
+              <p><%= event.host %><br><%= event.place %></p>
+            </div>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
     <div class="btn">
       <div class="btn-content">
         <div class="btn-hover"></div>
-        <a class="btn--readmore" href="#">read more</a>
+        <%= link_to "read more", events_path, class: "btn--readmore" %>
       </div>
     </div>
   </section>
