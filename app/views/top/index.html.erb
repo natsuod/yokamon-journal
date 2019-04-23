@@ -11,32 +11,20 @@
       NEWS
     </h2>
     <ul class="news--contents">
-      <li>
-        <a class="news--contents--a" href="#">
-          <span class="news-date">2019.02.13</span>
-          <span>作品メンテナンス完了のお知らせ</span>
-          <i class="fa fa-caret-right"></i>
-        </a>
-      </li>
-      <li>
-        <a class="news--contents--a" href="#">
-          <span class="news-date">2019.01.30</span>
-          <span>作品移設のお知らせ</span>
-          <i class="fa fa-caret-right"></i>
-        </a>
-      </li>
-      <li class="news-last">
-        <a class="news--contents--a" href="#">
-          <span class="news-date">2019.01.29</span>
-          <span>作品展示一部終了のお知らせ</span>
-          <i class="fa fa-caret-right"></i>
-        </a>
-      </li>
+      <% @topics.each do |topic| %>
+        <li>
+          <%= link_to topic_path(topic.id), class: "news--contents--a" do %>
+            <span class="news-date"><%= topic.created_at.strftime("%Y.%m.%d") %></span>
+            <span><%= topic.title %></span>
+            <i class="fa fa-caret-right"></i>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
     <div class="btn">
       <div class="btn-content">
         <div class="btn-hover"></div>
-        <a class="btn--readmore" href="#">read more</a>
+        <%= link_to "read more", topics_path, class: "btn--readmore" %>
       </div>
     </div>
   </section>
