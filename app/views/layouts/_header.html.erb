@@ -1,9 +1,9 @@
 <header>
   <div class="header--contents">
     <div class="logo">
-      <a href="#">
+      <%= link_to root_path do %>
         <%=image_tag('onsenart_logo.svg')%>
-      </a>
+      <% end %>
     </div>
     <ul class="header--topnav">
       <% if user_signed_in? %>
