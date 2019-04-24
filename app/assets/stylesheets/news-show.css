@@ -8,12 +8,67 @@
 .news-contents h2 {
   font-size: 37px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 0;
 }
 
 .n-title .news-date {
   font-size: 24px;
   font-weight: bold;
+  clear: both;
+}
+
+.nickname p {
+  color: #231815;
+  font-size: 14px;
+}
+
+.more {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  z-index: 2;
+  height: 100px;
+  width: 100px;
+  text-align: left;
+}
+
+.more:hover ul.more_list {
+  display: block;
+}
+
+ul.more_list {
+  text-align: left;
+  width: 100px;
+  right: 0;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  display: none;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+ul.more_list li {
+  border-bottom: 1px solid #ddd;
+}
+
+ul.more_list li:last-child {
+  border-bottom: 0;
+}
+
+ul.more_list a {
+  display: block;
+  padding: 5px;
+}
+
+ul.more_list a:hover {
+  background-color: #cf3334;
+  color: #fff;
+}
+
+.more i {
+  color: #cf3334;
+  padding: 0;
+  z-index: 2;
 }
 
 .news-contents-pic img {
@@ -25,7 +80,8 @@
 .news-text {
   height: auto;
   width: 905px;
-  margin: 57px auto 132px;
+  margin: 57px auto 135px;
+  clear: both;
 }
 
 .news-text p {
@@ -37,7 +93,7 @@
 .n-buttons {
   width: 714px;
   height: 50px;
-  margin: 0 auto 105px;
+  margin: 0 auto 100px;
 }
 
 .n-buttons-contents {
@@ -56,3 +112,14 @@
 .n-buttons ul .last-button {
   margin-right: 0;
 }
+
+.n-buttons-destroy {
+  margin-bottom: 200px;
+}
+
+.news-contents .destroy {
+  font-size: 16px;
+  font-weight: bold;
+  color: #231815;
+}
+

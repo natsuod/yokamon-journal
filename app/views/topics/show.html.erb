@@ -2,15 +2,28 @@
   <div class="n-title">
     <h2><%= @topic.title %></h2>
     <div class="news-date"><%= @topic.created_at.strftime("%Y.%m.%d") %></div>
-  </div>
+    <div class="nickname">
+      <p>投稿者： <%= @topic.user.nickname %>さん</p>
+    </div>
   <div class="news-contents-pic">
     <% unless @topic.image.blank? %>
       <%= image_tag @topic.image.url %>
     <% end %>
   </div>
 </div>
+</div>
 <div class="news-text">
   <p><%= @topic.body %></p>
+  <% if user_signed_in? && current_user.id == @topic.user_id %>
+    <div class="more">
+      <span><i class="fa fa-chevron-circle-down fa-lg"></i></span>
+      <ul class="more_list">
+        <li>
+          <%= link_to '削除', "/topics/#{@topic.id}", method: :delete %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
 </div>
 <div class="n-buttons">
   <div class="n-buttons-contents">
