@@ -26,6 +26,19 @@
 
   <div class="event-text">
     <p><%= @event.e_body %></p>
+    <% if user_signed_in? && current_user.id == @event.user_id %>
+      <div class="more">
+        <span><i class="fa fa-chevron-circle-down fa-lg"></i></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '編集', "/events/#{@event.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除', "/events/#{@event.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
   </div>
 
   <div class="event-details" id="bottom-detail">
