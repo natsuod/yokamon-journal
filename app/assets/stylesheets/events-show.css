@@ -58,6 +58,12 @@
   margin: 0 auto;
 }
 
+.event-poster .post-user {
+  color: #231815;
+  font-size: 14px;
+  line-height: 24px;
+}
+
 .event-poster .no-image-event p {
   font-size: 40px;
   color: #fff;

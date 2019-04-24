@@ -15,6 +15,7 @@
   </div>
 
   <div class="event-poster">
+  <p class="post-user">投稿者： <%= @event.user.nickname %>さん</p>
     <% unless @event.e_image.blank? %>
       <%= image_tag @event.e_image.url %>
     <% else %>
