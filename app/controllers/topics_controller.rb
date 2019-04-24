@@ -27,6 +27,17 @@ class TopicsController < ApplicationController
     topic.destroy if topic.user_id == current_user.id
   end
 
+  def edit
+    @topic = Topic.find(params[:id])
+  end
+
+  def update
+    topic = Topic.find(params[:id])
+    if topic.user_id == current_user.id
+      topic.update(topic_params)
+    end
+  end
+
   def topic_params
     params.require(:topic).permit(:title, :body, :image).merge(user_id: current_user.id)
   end
