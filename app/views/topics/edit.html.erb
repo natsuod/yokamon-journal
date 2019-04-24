@@ -1,0 +1,47 @@
+<div class="form-container">
+  <h3>編集する</h3>
+
+  <div class="form-content">
+
+    <div class="form">
+      <%= form_for @topic do |f| %>
+        <table>
+          <tbody>
+            <tr>
+              <th>
+                <%= f.label :ニュースタイトル %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_field :title, placeholder: 'ワークショップ開催のお知らせ' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :ニュース内容 %><span>*</span>
+              </th>
+              <td>
+                <%= f.text_area :body, placeholder: 'お知らせの内容を記入してください。' %>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <%= f.label :画像ファイル添付 %>
+              </th>
+              <td>
+                <%= f.file_field :image %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>入力内容を再度ご確認の上、間違えがなければ下の送信ボタンをクリック・タップしてください。</p>
+        <p class="submit">
+          <%= f.submit 'ニュースを編集する', class: 'submit-btn' %>
+        </p>
+      <% end %>
+    </div>
+    </div>
+
+    <div class="notes">
+    </div>
+  </div>
+</div>
