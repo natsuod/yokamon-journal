@@ -31,6 +31,13 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def update
+    event = Event.find(params[:id])
+    if event.user_id == current_user.id
+      event.update(event_params)
+    end
+  end
+
   def event_params
     params.require(:event).permit(:e_title, :time, :date, :e_body, :e_image, :host, :place, :price).merge(user_id: current_user.id)
   end
