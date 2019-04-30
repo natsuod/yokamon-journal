@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   $('.autoplay').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
